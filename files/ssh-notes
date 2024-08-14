@@ -1,0 +1,40 @@
+Setting up authorized keys allows you to use SSH key-based authentication, which is more secure and convenient than using passwords for SSH access. To set up an authorized key, you'll need to generate an SSH key pair on your client machine and then add the public key to the `authorized_keys` file on the remote server.
+
+Here's a step-by-step guide to setting up an authorized key:
+
+1. **Generate SSH key pair (on the client machine):**
+
+   If you don't have an SSH key pair yet, you can generate one using the following command in the terminal on your local machine:
+
+# ssh-keygen -t rsa -b 4096
+
+   This will generate a 4096-bit RSA key pair (public and private keys) in the `~/.ssh/` directory.
+
+2. **Copy the public key to the remote server (using SSH):**
+
+   Use the `ssh-copy-id` command to securely copy the public key to the remote server. Replace `user` with your username on the remote server and `server_ip` with the IP address or domain name of the remote server:
+
+# ssh-copy-id user@server_ip
+
+   It will prompt you for the password of the remote user once. After entering the password, it will copy your public key to the remote server and add it to the `authorized_keys` file.
+
+   Alternatively, you can manually copy the contents of your public key file (`~/.ssh/id_rsa.pub`) and append it to the `~/.ssh/authorized_keys` file on the remote server using an editor like `nano` or `vim`.
+
+3. **Set correct permissions on the remote server:**
+
+   SSH requires strict permissions for the `authorized_keys` file to ensure security. Run the following commands on the remote server to set the correct permissions:
+
+#   chmod 700 ~/.ssh
+#   chmod 600 ~/.ssh/authorized_keys
+
+   These commands ensure that only you (the owner) have read and write access to the `~/.ssh` directory and the `authorized_keys` file.
+
+4. **Test SSH key-based authentication:**
+
+   Now, try to connect to the remote server using SSH:
+
+#   ssh user@server_ip
+
+   If everything is set up correctly, you should be able to log in without entering a password. Your private key on the client machine will be used to authenticate you securely.
+
+Remember to keep your private key safe and do not share it with anyone. Also, always use strong passphrases when generating SSH keys for additional security.

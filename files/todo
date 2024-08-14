@@ -1,0 +1,71 @@
+Todo:
+
+------------------
+Xorg Configuration:
+------------------
+
+Choose what finger to use with fprintd
+
+Charging notification and icon in polybar
+
+Vim open in insert mode automatically
+
+Floating Windows in BSPWM - Copy 
+
+Research insert html commands into vim like vscode and can i get auto correct in vim? But i dont want any dumb underlines telling me my spelling is wrong.
+
+zsh - I want my prompt to be all the same color as default (how it is now with bash) but i want the current directory color to be different. 
+Design the zsh prompt in Weyland first before bringing it over to the Xorg configuration.
+
+Learn vim keybindings to make your life easier. Por ejemplo: copy a line down to the next line
+
+Register mucator.net & mucator.com
+
+---------------------
+Weyland Configuration:
+---------------------
+
+zsh 
+
+Terminal blur: transparent but no additional color to the background - just glass look
+
+GPT Prompts:
+
+How do domain names work and how are their prices determined? If I purchase a cheap domain name will the price I pay ever increase if I begin to have more traffic? 
+Will it ever increase if the word or name becomes prominant?
+
+How do I get my long hair to stay back and be not so dry.
+
+How does online college compare to in person college?
+
+How can I design a custom window manager that has window animations and trackpad guestures with Weyland for linux? Is it practical to develop this? What approaches must I take to learn how to do it?
+
+Can you give me a road map of things I need to learn in order to develop my own laptop? I will need to learn how laptops work and I will need to learn how to machine
+and develop a 3D prototype.
+
+
+
+
+------------------------------------------------------
+
+This is the dream:
+
+I want to have a bottom bar in weyland that is the same blur color as the terminal background is. Find what triggers the background color. 
+Somehow either alacritty or st have to be getting fed the background color. I just need to find out how that works and which color it is taking from pywal.
+
+	Bar:	
+	Located at bottom of screen
+	Three finger swipe up pulls bar up exposing things like album art work and other cool things.
+	Double tap alt_R opens dictation menu in polybar. Say the word and it will display it on the bar.
+	
+	alt_R:
+	Holding alt_R zooms current window out into desktop with animation. 
+	Letting go of alt_R zooms window back in. 
+	alt_R + a zooms window out and sends window a desktop to the left
+	alt_R + f zooms window out and moves a desktop the right. 
+	With multiple windows open alt_R + k, o, p, [ keys will interact with corisponding windows.
+
+Potentially all windows open as floating by default but then alt + ~ key invokes tiling mode. alt + ~ key again goes back into floating mode. Windows animate into a floating state.
+
+Three finger swipes will resize the floating window.
+Four figner swipes will shift to alternate desktops. 
